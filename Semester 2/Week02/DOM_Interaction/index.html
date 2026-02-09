@@ -1,0 +1,131 @@
+<!doctype html>
+<!--
+  This is a standard HTML5 document declaration.
+  It tells the browser which version of HTML we are using.
+-->
+<html lang="en">
+  <head>
+    <!-- Character encoding -->
+    <meta charset="UTF-8" />
+
+    <!-- Makes the page responsive on different screen sizes -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Page title (shown in the browser tab) -->
+    <title>JavaScript & DOM — Starter</title>
+
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!--
+      Header section.
+      This contains the title of the page and a short description.
+    -->
+    <header class="container">
+      <h2 class="brand">DOM Interaction Demo</h2>
+      <p class="muted">
+        A static page (for now). We’ll add JavaScript step-by-step.
+      </p>
+    </header>
+
+    <main class="container">
+      <!--
+        Main content card.
+        Everything we will interact with using JavaScript
+        lives inside this section.
+      -->
+      <section class="card">
+        <!--
+          Main heading.
+          Later, JavaScript will change this text dynamically.
+        -->
+        <h1 id="headline">This is my DOM starter page.</h1>
+
+        <p class="lead">
+          Right now, this page is static. Next, we’ll use JavaScript to make it interactive.
+        </p>
+
+        <!--
+          Image element.
+          JavaScript will later change its 'src' attribute.
+        -->
+        <img
+          class="hero-image"
+          src="images/restaurant1.jpg"
+          alt="Restaurant interior"
+          id="heroImage"
+        />
+
+        <!--
+          Button row.
+          These buttons do nothing yet.
+          They are placeholders for later DOM examples.
+        -->
+        <div class="row">
+          <button class="btn" id="toggleInfoBtn" type="button">
+            Show more info
+          </button>
+
+          <button class="btn" id="swapImageBtn" type="button">
+            Change photo
+          </button>
+
+          <button class="btn" id="changeColorBtn" type="button">
+            Change theme
+          </button>
+
+          <button class="btn" id="toggleModeBtn" type="button">
+            Toggle Light / Dark mode
+          </button>
+        </div>
+
+        <!--
+          Extra content area.
+          JavaScript will later show and hide this paragraph.
+        -->
+        <p id="extraInfo" class="note">
+          All our dishes are 100% plant-based, prepared with seasonal, locally sourced ingredients, and cooked with care. <br>
+		  THis info will hidden or appear (using the DOM).
+        </p>
+
+        <!--
+          Text input field.
+          Later, JavaScript will listen to what the user types
+          and update the heading in real time.
+        -->
+        <label class="label" for="headlineInput">
+          Type a new headline (later):
+        </label>
+
+        <input
+          id="headlineInput"
+          class="input"
+          type="text"
+          placeholder="This will become a live preview example"
+        />
+
+        <!--
+          Accessibility buttons.
+          JavaScript will later change the font size of the page.
+        -->
+        <div class="row">
+          <button class="btn" id="decreaseTextBtn" type="button">A−</button>
+          <button class="btn" id="increaseTextBtn" type="button">A+</button>
+        </div>
+      </section>
+
+      <!--
+        Footer section.
+        The year will be inserted using JavaScript.
+      -->
+      <footer class="footer">
+        © <span id="year"></span> — DOM Worksheet Starter
+      </footer>
+    </main>
+
+    <!-- Link to the external JavaScript file -->
+    <script src="script.js"></script>
+  </body>
+</html>

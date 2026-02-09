@@ -1,0 +1,167 @@
+/*
+  CSS variables.
+  These define the main colors used throughout the page.
+  Later, JavaScript will indirectly affect these.
+*/
+:root {
+  --bg: #0f172a;
+  --card: rgba(255, 255, 255, 0.08);
+  --text: #e2e8f0;
+  --muted: #94a3b8;
+  --accent: #22c55e;
+  --border: rgba(255, 255, 255, 0.14);
+}
+
+/* Apply box-sizing to all elements */
+* {
+  box-sizing: border-box;
+}
+
+/*
+  Base page styling (Dark).
+  JavaScript will not style these directly.
+*/
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/*
+  Secondary page styling (Light).
+  JavaScript will not style these directly.
+*/
+body.light {
+  --bg: #f8fafc;
+  --text: #0f172a;
+  --muted: #475569;
+  --card: rgba(2,6,23,0.04);
+  --border: rgba(2,6,23,0.14);
+}
+
+/*
+  Centered layout container.
+*/
+.container {
+  width: min(980px, 92vw);
+  margin: 0 auto;
+}
+
+/* Header branding */
+.brand {
+  margin: 18px 0 4px;
+}
+
+/* Muted (secondary) text */
+.muted {
+  margin: 0 0 18px;
+  color: var(--muted);
+}
+
+/*
+  Card component.
+  This visually groups related content.
+*/
+.card {
+  border: 1px solid var(--border);
+  background: var(--card);
+  border-radius: 18px;
+  padding: 18px;
+}
+
+/* Lead paragraph */
+.lead {
+  color: var(--muted);
+  line-height: 1.6;
+  max-width: 65ch;
+}
+
+/* Main image styling */
+.hero-image {
+  width: 100%;
+  height: 320px; /* Fixed frame height */
+  object-fit: cover; /* Crops image to fit the frame */
+  display: block; /* Removes gap between header and image */
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  margin: 16px 0;
+}
+
+/* Horizontal row for buttons */
+.row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 12px 0;
+}
+
+/* Button appearance */
+.btn {
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* Button hover effect */
+.btn:hover {
+  filter: brightness(1.05);
+}
+
+/*
+  Note box.
+  This will later be shown/hidden using JavaScript.
+*/
+.note {
+  margin: 14px 0;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px dashed var(--border);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--muted);
+}
+
+/* Label above input fields */
+.label {
+  display: block;
+  margin-top: 14px;
+  color: var(--muted);
+}
+
+/* Text input styling */
+.input {
+  width: min(520px, 100%);
+  padding: 10px 12px;
+  margin-top: 8px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text);
+}
+
+/* Footer styling */
+.footer {
+  margin: 28px 0 40px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  text-align: center;
+  font-size: 14px;
+}
+
+/* hides extra infomation when the page loads */
+#extrainfo {
+
+  display: none;
+
+}
+
+/* Alternative card colour */
+.card.is-highlighted {
+  
+  background-color: #094f1a;
+}
