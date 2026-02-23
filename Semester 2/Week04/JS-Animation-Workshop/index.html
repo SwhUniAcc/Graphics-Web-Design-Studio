@@ -1,0 +1,95 @@
+<!doctype html>
+<!--
+  This is a standard HTML5 document declaration.
+  It tells the browser which version of HTML we are using.
+-->
+<html lang="en">
+  <head>
+    <!-- Character encoding -->
+    <meta charset="UTF-8" />
+
+    <!-- Makes the page responsive on different screen sizes -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Page title (shown in the browser tab) -->
+    <title>JavaScript &amp; Animation — Starter</title>
+
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="style.css" />
+
+    <script src ="gsap.min.js"></script>
+    <!-- <script src="https://cdnjs.coudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>  -->
+  </head>
+
+  <body>
+        <script src="script.js"></script>
+    <!--
+      Header section.
+      This contains the title of the page and a short description.
+    -->
+    <header class="container">
+      <h2 class="brand">La Bella Cucina</h2>
+      <p class="muted">
+        A static page (for now). We’ll add JavaScript with animation effects step-by-step.
+      </p>
+    </header>
+
+    <main class="container">
+      <!--
+        Main content card.
+        Everything we will interact with using JavaScript
+        lives inside this section.
+      -->
+      <section class="card">
+        <!--
+          Main heading.
+          Later, JavaScript will change this text dynamically.
+        -->
+        <h1 id="headline">This is my practice with Javascript and Animation page.</h1>
+
+        <p class="lead">
+          Right now, this page is static. Next, we’ll use JavaScript to make it interactive.
+        </p>
+
+        <!--
+          Image element.
+          JavaScript will later change its 'src' attribute.
+        -->
+        <img
+          class="hero-image"
+          src="images/restaurant1.jpg"
+          alt="Restaurant interior"
+          id="heroImage"
+        />
+
+          <img
+          class="hero-image"
+          src="images/restaurant-dishes.png"
+          alt="Assorted restaurant dishes"
+          id="heroImage"
+        />
+
+          <img
+          class="hero-image"
+          src="images/restaurant-cocktails.png"
+          alt="Assorted restaurant cocktails"
+          id="cocktailImage"
+        />
+
+              <p class="description"> Welcome to La Bella Cucina. We are a cosy Italian restaurant offering authentic flavours, handmade pasta, and a warm atmosphere in the heart of the city.</p>
+
+		</section>
+
+      <!--
+        Footer section.
+        The year will be inserted using JavaScript.
+      -->
+      <footer class="footer">
+        © <span id="year"></span> — Javascript and Animation Worksheet Starter
+      </footer>
+    </main>
+
+    <!-- Link to the external JavaScript file -->
+    <script src="script.js"></script>
+  </body>
+</html>
