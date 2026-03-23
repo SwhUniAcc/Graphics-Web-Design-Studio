@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark"> <!-- language and background colour default -->
+
+<head>
+
+<!-- bootstrap & css setup -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="styles.css"/>
+
+    <title>HERBI'S</title> <!-- the text in the island on the top of the browser -->
+</head>
+
+<body>
+
+    <header>
+<!-- the navbar -->
+
+<nav class="navbar custom-navbar">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Herbi's</a>
+
+    <!-- Navbar Links -->
+    <ul class="navbar-nav ms-auto d-flex flex-row gap-4">
+      <li class="nav-item">
+        <a class="nav-link" href="home.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="food.html">Our Dishes</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+    </header>
+
+    <!-- introduction-->
+<div class="container-fluid py-0">
+    <div class="row mb-6 justify-content-center text-center">
+    <div class="col-md-9 d-flex flex-column align items center">
+    <div class="text-box img-shadow"> 
+        <h1 class="header-mid">Welcome to Herbi's</h1>
+        <p class="para-left">Welcome to Herbi's, A vegan restaurant in Bristol where fresh ingredients, bold flavours, and a relaxed atmosphere come together. Our menu is inspired by Mediterranean cooking and modern plant-based cuisine, offering colourful dishes that are both satisfying and beautifully presented.</p>
+        <img src="images/restaurant1.jpg" class="img-fluid" alt="...">
+    <p class="para-left">Located in the heart of Bristol, Herbi's is the perfect place for casual lunches, evening dinners, and special occasions with friends or family. From vibrant salads and comforting mains to creative small plates and refreshing drinks, every dish is prepared with care to celebrate the variety and richness of vegan food.</p>
+    <p class="para-left">We believe dining should feel welcoming, memorable, and full of character. With a stylish interior, friendly service, and a menu designed for both dedicated vegans and curious food lovers, Herbi's offers a unique plant-based experience in one of Bristol’s most exciting food scenes.</p>
+    </div>
+</div>
+
+    <!-- Contact Us-->
+<div class="container-fluid py-0">
+    <div class="row mb-6 justify-content-center text-center">
+    <div class="col-md-9 d-flex flex-column align items center">
+    <div class="text-box img-shadow"> 
+        <h1 class="header-mid">Contact Us</h1>
+          <p class="para-left">Feel free to contact us using the following infomation.</p>
+        <h2 class="header-mid">Contact Infomation</h2>
+          <li class="para-left">Email: Herbisofficial@bherbisrestaurant.co.uk</li>
+          <li class="para-left">Phone: +44 117 123 4567</li>
+        <h2 class="header-mid">Opening Times</h2>
+          <li class="para-left">Monday – Friday: 9:00 AM – 6:00 PM</p>
+          <li class="para-left">Saturday: 10:00 AM – 5:00 PM</p>
+          <li class="para-left">Sunday: Closed</p>
+    </div>
+</div>
+
+    <!-- End of main content card -->
+
+    <footer class="footer">
+      <span id="year"></span> — Herbi's Vegan Restaurant
+    </footer>
+    <!-- Footer section. The year will be inserted automatically using JavaScript -->
+
+  </main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+  <!-- Links the JavaScript file that runs small interactive features (e.g. updating the year) -->
+
+</body>
+</html>

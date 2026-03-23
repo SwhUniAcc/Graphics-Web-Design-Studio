@@ -1,0 +1,120 @@
+@font-face { /* adds new font locally */
+    font-family: ScienceGothic;
+    src: url(ScienceGothic.ttf);
+}
+
+@font-face {
+    font-family: Barlow;
+    src: url(Barlow.ttf);
+}
+
+@font-face {
+    font-family: Archivo;
+    src: url(Archivo.ttf);
+}
+
+nav .navbar-brand { /* makes the bootstrap navbar un-interactable */
+    pointer-events: none;
+    cursor: default;
+}
+
+.custom-navbar .navbar-brand,
+.custom-navbar .nav-link {
+  color: #52674D;
+}
+
+.custom-navbar .nav-link:hover { /* changes the text colour in the navbar when hovering */
+  color: #7CBF73;
+}
+
+.navbar-brand { /* font and colour for the text in the header */
+    font-family:ScienceGothic, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(0, 0, 0);
+}
+
+:root {
+    --navbar-bg-color: #ffffff; /* Navbar color */
+}
+
+.custom-navbar {
+    background-color: var(--navbar-bg-color);
+}
+
+.header-mid { /* black header text that is alligned in the middle */
+    font-family:Archivo,'Times New Roman', Times, serif;
+    color: #52674D;
+    font-weight: bold;
+    text-align: center;
+}
+
+.header-mid-2 { /* white header text that is alligned in the middle */
+    font-family:Archivo,'Times New Roman', Times, serif;
+    color: #52674D;
+    font-weight: bold;
+    text-align: center;
+}
+
+.para-left{ /* white paragraph text that is alligned to the left */
+    font-family: Barlow, Verdana, Tahoma, sans-serif;
+    color: #52674D;
+    font-style: normal;
+    text-align: left;
+}
+
+.para-mid{ /* black paragraph text that is alligned in the middle */
+    font-family: Barlow, Verdana, Tahoma, sans-serif;
+    color: #52674D;
+    font-style: normal;
+    text-align: center;
+}
+
+.para-mid-2{ /* white paragraph text that is alligned in the middle */
+    font-family: Barlow, Verdana, Tahoma, sans-serif;
+    color: #52674D;
+    font-style: normal;
+    text-align: center;
+}
+
+.image { /* universial image scaling */
+    width: 75%;
+}
+
+.text-box { /* use to add a white box behind text */
+    border: 25px black;
+    padding: 20px;
+    background: #FCFCFC;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.img-shadow { /* used to add shadow to images and textboxes  */
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.75);
+}
+
+body { /* the background with dynamic movement */
+    position: relative;
+    background-size: center;
+    background-position: center;
+    background-image: url(images/background.jpg);
+}
+
+body::before { /* the blue overlay and blur on the background */
+    content:"";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #7CBF73;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.colorscheme { /* does nothing, here so i can remember the hex values of the color scheme */
+    background: #FCFCFC;
+    background: #C9FFA1;
+    background: #B5E691;
+    background: #8CD982;
+    background: #7CBF73;
+    background: #52674D;
+}

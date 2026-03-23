@@ -11,63 +11,83 @@ document.addEventListener("DOMContentLoaded", () => {
     yearEl.textContent = new Date().getFullYear();
   }
 
-  gsap.registerPlugin(ScrollTrigger);
+  // gsap.registerPlugin(ScrollTrigger);
 
-  const iconButtons = document.querySelectorAll(".icon-bnt");
+  // const iconButtons = document.querySelectorAll(".icon-bnt");
 
-  const cocktailsImage = document.querySelector(".cocktails-image");
+  // const cocktailsImage = document.querySelector(".cocktails-image");
 
-  gsap.from(iconButtons, {
+  // gsap.from(iconButtons, {
+  //   scrollTrigger: {
+  //     trigger: ".scroll-icons",
+  //     start: "top 80%",
+  //     toggleActions: "play none none none"
+  //   },
+  //   y: 80,
+  //   opacity: 0,
+  //   duration: 1,
+  //   stagger: 0.2,
+  //   ease: "power3.out"
+  // });
+
+  // gsap.from(cocktailsImage, {
+  //   scrollTrigger: {
+  //     trigger: ".cocktails-image",
+  //     start: "top 85%",
+  //     toggleActions: "play none none none"
+  //   },
+  //   y: 80,
+  //   opacity: 0,
+  //   duration: 1.2,
+  //   ease: "power3.out"
+  // });
+
+gsap.registerPlugin(ScrollTrigger);
+
+// Select ALL sections
+const sections = document.querySelectorAll(".text-box");
+
+sections.forEach((section) => {
+  const header = section.querySelectorAll(".header-mid");
+  const text = section.querySelectorAll(".para-left");
+  const image = section.querySelector("img");
+
+  // Create timeline for each section
+  const tl = gsap.timeline({
     scrollTrigger: {
-      trigger: ".scroll-icons",
+      trigger: section,
       start: "top 80%",
       toggleActions: "play none none none"
-    },
-    y: 80,
-    opacity: 0,
-    duration: 1,
-    stagger: 0.2,
-    ease: "power3.out"
+    }
   });
 
-  gsap.from(cocktailsImage, {
-    scrollTrigger: {
-      trigger: ".cocktails-image",
-      start: "top 85%",
-      toggleActions: "play none none none"
-    },
-    y: 80,
+  // Animate header(s)
+  tl.from(header, {
+    y: 40,
     opacity: 0,
-    duration: 1.2,
-    ease: "power3.out"
+    duration: 0.8,
+    ease: "power3.out",
+    stagger: 0.2
   });
 
+  // Animate text (paragraphs + list items)
+  tl.from(text, {
+    y: 30,
+    opacity: 0,
+    duration: 0.6,
+    stagger: 0.15,
+    ease: "power3.out"
+  }, "-=0.4");
+
+  // Animate image (only if it exists)
+  if (image) {
+    tl.from(image, {
+      y: 60,
+      opacity: 0,
+      duration: 1,
+      ease: "power3.out"
+    }, "-=0.4");
+  }
 });
 
-//   //Animated buttons for the dishes
-//   const dishButton = document.querySelectorAll(".dish-btn");
-
-//   gsap.from(dishButtons, {
-//     y: 60,
-//     opacity: 0,
-//     duration: 1,
-//     stagger: 0.2,
-//     ease: "power3.out"
-//   });
-
-//     button.addEventListener("mouseenter", () => {
-//     gsap.to(button, {
-//       scale: 1.08,
-//       duration: 0.25,
-//       ease: "power2.out"
-//     });
-//   });
-
-//   button.addEventListener("mouseleave", () => {
-//     gsap.to(button, {
-//       scale: 1,
-//       duration: 0.25,
-//       ease: "power2.out"
-//     });
-//   });
-// });
+});
